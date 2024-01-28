@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -17,18 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="4sA-Fb-GTR">
-                                <rect key="frame" x="0.0" y="-760" width="414" height="2416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="2416" id="peO-HF-Hm6"/>
+                                    <constraint firstAttribute="height" constant="896" id="mez-bF-aN1"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4sA-Fb-GTR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8Gv-dd-H75"/>
-                            <constraint firstItem="4sA-Fb-GTR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DBt-r4-sIw"/>
-                            <constraint firstItem="4sA-Fb-GTR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rdi-a0-2lt"/>
+                            <constraint firstItem="4sA-Fb-GTR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Qce-cf-zoY"/>
+                            <constraint firstItem="4sA-Fb-GTR" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="ZX8-jb-XYw"/>
+                            <constraint firstItem="4sA-Fb-GTR" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="kee-do-7CE"/>
+                            <constraint firstAttribute="top" secondItem="4sA-Fb-GTR" secondAttribute="top" id="mI9-B5-LDm"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
