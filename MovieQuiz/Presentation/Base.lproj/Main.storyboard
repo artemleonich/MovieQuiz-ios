@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Regular</string>
-        </array>
         <array key="YS Display-Medium.ttf">
             <string>YSDisplay-Medium</string>
         </array>
@@ -29,17 +26,17 @@
                                 <rect key="frame" x="20" y="58" width="374" height="804"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="224" translatesAutoresizingMaskIntoConstraints="NO" id="yx0-l6-ild">
-                                        <rect key="frame" x="0.0" y="0.0" width="362" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="23.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-6H-2bR" userLabel="Question Title Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="23.5"/>
                                                 <color key="backgroundColor" name="YP Black (iOS)"/>
-                                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YP White (iOS)"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1/10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-rL-nVJ" userLabel="Index Label">
-                                                <rect key="frame" x="293" y="0.0" width="69" height="22.5"/>
+                                                <rect key="frame" x="296" y="0.0" width="72" height="23.5"/>
                                                 <color key="backgroundColor" name="YP Black (iOS)"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" name="YP White (iOS)"/>
@@ -48,14 +45,14 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-dm-GNn" userLabel="Preview Image">
-                                        <rect key="frame" x="0.0" y="42.5" width="374" height="561"/>
+                                        <rect key="frame" x="0.0" y="43.5" width="374" height="561"/>
                                         <color key="backgroundColor" name="YP White (iOS)"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tHv-dm-GNn" secondAttribute="height" multiplier="2:3" id="dRJ-Tu-hwQ"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше, чем 5?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a6C-nm-ksg" userLabel="Question Label">
-                                        <rect key="frame" x="0.0" y="623.5" width="374" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="624.5" width="374" height="99.5"/>
                                         <color key="backgroundColor" name="YP Black (iOS)"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" name="YP White (iOS)"/>
