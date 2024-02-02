@@ -1,6 +1,8 @@
 import UIKit
 
 final class MovieQuizViewController: UIViewController {
+    @IBOutlet private var noButton: UIButton!
+    @IBOutlet private var yesButton: UIButton!
     @IBOutlet private var counterLabel: UILabel!
     @IBOutlet private var textLabel: UILabel!
     @IBOutlet private var imageView: UIImageView!
@@ -10,8 +12,10 @@ final class MovieQuizViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction private func noButtonClicked(_ sender: UIButton) {
+        print("Нажатие")
     }
     @IBAction private func yesButtonClicked(_ sender: UIButton) {
+        print("Нажатие")
     }
 }
 
