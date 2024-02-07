@@ -132,7 +132,7 @@ final class MovieQuizViewController: UIViewController {
                           animations: {
             self.imageView.image = newImage
             self.imageView.layer.borderWidth = 8
-            self.imageView.layer.borderColor = UIColor.ypGray.cgColor
+            self.imageView.layer.borderColor = UIColor.clear.cgColor
         },
                           completion: nil)
         textLabel.text = step.question
