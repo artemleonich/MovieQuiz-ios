@@ -117,8 +117,6 @@ final class MovieQuizViewController: UIViewController {
             currentQuestionIndex += 1
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
-            noButton.isEnabled = true
-            yesButton.isEnabled = true
             show(quiz: viewModel)
         }
     }
@@ -137,6 +135,7 @@ final class MovieQuizViewController: UIViewController {
                           completion: nil)
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
+        enableAnswerButtons()
     }
     
     private func show(quiz result: QuizResultsViewModel) {
@@ -157,13 +156,20 @@ final class MovieQuizViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
-        self.noButton.isEnabled = true
-        self.yesButton.isEnabled = true
+    }
+    
+    private func disableAnswerButtons() {
+        noButton.isEnabled = false
+        yesButton.isEnabled = false
+    }
+    
+    private func enableAnswerButtons() {
+        noButton.isEnabled = true
+        yesButton.isEnabled = true
     }
     
     @IBAction private func noButtonClicked(_ sender: UIButton) {
-        noButton.isEnabled = false
+        disableAnswerButtons()
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = false
         
@@ -171,7 +177,7 @@ final class MovieQuizViewController: UIViewController {
     }
     
     @IBAction private func yesButtonClicked(_ sender: UIButton) {
-        yesButton.isEnabled = false
+        disableAnswerButtons()
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = true
         
