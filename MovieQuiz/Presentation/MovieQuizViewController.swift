@@ -53,12 +53,6 @@ final class MovieQuizViewController: UIViewController {
     @IBOutlet private var textLabel: UILabel!
     @IBOutlet private var imageView: UIImageView!
     
-    private struct ViewModel {
-        let image: UIImage
-        let question: String
-        let questionNumber: String
-    }
-    
     private struct QuizStepViewModel {
         let image: UIImage
         let question: String
@@ -95,8 +89,7 @@ final class MovieQuizViewController: UIViewController {
         if isCorrect {
             correctAnswers += 1
         }
-        
-        
+
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
@@ -124,17 +117,8 @@ final class MovieQuizViewController: UIViewController {
     }
     
     private func show(quiz step: QuizStepViewModel) {
-        let newImage = step.image
-        
-        UIView.transition(with: imageView,
-                          duration: 0,
-                          options: .transitionCrossDissolve,
-                          animations: {
-            self.imageView.image = newImage
-            self.imageView.layer.borderWidth = 8
-            self.imageView.layer.borderColor = UIColor.clear.cgColor
-        },
-                          completion: nil)
+        imageView.image = step.image
+        imageView.layer.borderColor = UIColor.clear.cgColor
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
         enableAnswerButtons()
