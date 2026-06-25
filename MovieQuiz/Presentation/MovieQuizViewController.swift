@@ -7,43 +7,43 @@ final class MovieQuizViewController: UIViewController {
     private let questions: [QuizQuestion] = [
         QuizQuestion(
             image: "The Godfather",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: true),
         QuizQuestion(
             image: "The Dark Knight",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: true),
         QuizQuestion(
             image: "Kill Bill",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: true),
         QuizQuestion(
             image: "The Avengers",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: true),
         QuizQuestion(
             image: "Deadpool",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: true),
         QuizQuestion(
             image: "The Green Knight",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: true),
         QuizQuestion(
             image: "Old",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: false),
         QuizQuestion(
             image: "The Ice Age Adventures of Buck Wild",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: false),
         QuizQuestion(
             image: "Tesla",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: false),
         QuizQuestion(
             image: "Vivarium",
-            text: "Рейтинг этого фильма больше чем 6?",
+            text: L10n.questionText,
             correctAnswer: false),
     ]
 
@@ -105,15 +105,15 @@ final class MovieQuizViewController: UIViewController {
         // .image trait so VoiceOver announces "image" before the label.
         imageView.isAccessibilityElement = true
         imageView.accessibilityTraits = .image
-        imageView.accessibilityLabel = "Постер фильма"
+        imageView.accessibilityLabel = L10n.a11yPoster
 
         // Answer buttons. The storyboard buttons have no visible title, so
         // the accessibility label is the only thing VoiceOver users hear.
-        noButton.accessibilityLabel = "Нет"
-        noButton.accessibilityHint = "Ответить, что рейтинг фильма меньше или равен 6"
+        noButton.accessibilityLabel = L10n.a11yNoLabel
+        noButton.accessibilityHint = L10n.a11yNoHint
 
-        yesButton.accessibilityLabel = "Да"
-        yesButton.accessibilityHint = "Ответить, что рейтинг фильма больше 6"
+        yesButton.accessibilityLabel = L10n.a11yYesLabel
+        yesButton.accessibilityHint = L10n.a11yYesHint
     }
 
     // MARK: - Dynamic Type
@@ -203,11 +203,11 @@ final class MovieQuizViewController: UIViewController {
 
     private func showNextQuestionOrResults() {
         if currentQuestionIndex == questions.count - 1 {
-            let text = "Ваш результат: \(correctAnswers)/10"
+            let text = L10n.resultText(correct: correctAnswers, total: questions.count)
             let viewModel = QuizResultsViewModel(
-                title: "Этот раунд окончен!",
+                title: L10n.resultTitle,
                 text: text,
-                buttonText: "Сыграть ещё раз")
+                buttonText: L10n.resultReplay)
             show(quiz: viewModel)
         } else {
             currentQuestionIndex += 1
@@ -230,7 +230,7 @@ final class MovieQuizViewController: UIViewController {
         },
                           completion: nil)
         textLabel.text = step.question
-        counterLabel.text = step.questionNumber
+        counterLabel.text = L10n.counterText(current: currentQuestionIndex + 1, total: questions.count)
         enableAnswerButtons()
     }
 
