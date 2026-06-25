@@ -1,0 +1,20 @@
+/* English */
+
+/* Question text */
+"question.text" = "Is this film's rating higher than 6?";
+
+/* Accessibility labels for the answer buttons */
+"a11y.poster" = "Movie poster";
+"a11y.no.label" = "No";
+"a11y.no.hint" = "Answer that the film's rating is less than or equal to 6";
+"a11y.yes.label" = "Yes";
+"a11y.yes.hint" = "Answer that the film's rating is higher than 6";
+
+/* Result alert text */
+"result.title" = "This round is over!";
+"result.text" = "Your score: %lld/%lld";
+"result.replay" = "Play again";
+
+/* Storyboard placeholder text */
+"label.question.prefix" = "Question:";
+"label.counter.format" = "%lld/%lld";

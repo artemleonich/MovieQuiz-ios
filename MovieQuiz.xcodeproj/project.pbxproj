@@ -18,6 +18,9 @@
 		AD5EE5DE284D7887003966EF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5EE5DD284D7887003966EF /* UIColor+Extensions.swift */; };
 		AD77F5742857F8810062FB14 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77F5732857F8810062FB14 /* Date+Extensions.swift */; };
 		AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7AFA542836189F00399704 /* Array+Extensions.swift */; };
+		A16EA88AF095A3C66DEB98F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8BD1ADDE20AE47DC20CE9B4 /* Localizable.strings */; };
+		747A62B9CF05D8AA128E87FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADB6039856A4057D04DC8642 /* Localizable.strings */; };
+		F7BB1E40D73FB48D7C5988B1 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7F15E801773A75F193586 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		AD5EE5DD284D7887003966EF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		AD77F5732857F8810062FB14 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AD7AFA542836189F00399704 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		A8BD1ADDE20AE47DC20CE9B4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ADB6039856A4057D04DC8642 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F2D7F15E801773A75F193586 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,8 @@
 		8F4738332848DE46005DF65E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8BD1ADDE20AE47DC20CE9B4 /* Localizable.strings (Base) */,
+				ADB6039856A4057D04DC8642 /* Localizable.strings (en) */,
 				53FC9BDD2B67D92C0089CEAA /* Fonts */,
 				AD1ABABC2831907F00B3E448 /* LaunchScreen.storyboard */,
 				AD1ABABA2831907F00B3E448 /* Assets.xcassets */,
@@ -103,6 +111,7 @@
 		AD1ABAB02831907B00B3E448 /* MovieQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				F2D7F15E801773A75F193586 /* Localization.swift */,
 				8F4738322848DE2A005DF65E /* Presentation */,
 				ADF0CF75283FDAA10075F54D /* Helpers */,
 				8F4738332848DE46005DF65E /* Resources */,
@@ -181,6 +190,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16EA88AF095A3C66DEB98F5 /* Localizable.strings in Resources */,
+				747A62B9CF05D8AA128E87FB /* Localizable.strings in Resources */,
 				AD1ABABE2831907F00B3E448 /* LaunchScreen.storyboard in Resources */,
 				53FC9BE12B67D95B0089CEAA /* YS Display-Medium.ttf in Resources */,
 				53FC9BE22B67D95B0089CEAA /* YS Display-Bold.ttf in Resources */,
@@ -201,6 +212,7 @@
 				AD1ABAB62831907B00B3E448 /* MovieQuizViewController.swift in Sources */,
 				AD77F5742857F8810062FB14 /* Date+Extensions.swift in Sources */,
 				AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */,
+				F7BB1E40D73FB48D7C5988B1 /* Localization.swift in Sources */,
 				AD1ABAB42831907B00B3E448 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

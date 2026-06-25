@@ -1,0 +1,24 @@
+/* Russian (Base) — current strings in the app */
+
+/* Question text — used in all 10 QuizQuestion.text entries */
+"question.text" = "Рейтинг этого фильма больше чем 6?";
+
+/* Accessibility labels for the answer buttons (set programmatically in
+   setupAccessibility()). Centralized here so VoiceOver + the visible UI
+   stay in sync if either is ever translated. */
+"a11y.poster" = "Постер фильма";
+"a11y.no.label" = "Нет";
+"a11y.no.hint" = "Ответить, что рейтинг фильма меньше или равен 6";
+"a11y.yes.label" = "Да";
+"a11y.yes.hint" = "Ответить, что рейтинг фильма больше 6";
+
+/* Result alert text. Note: the %lld formatting token is filled in
+   from correctAnswers at runtime. */
+"result.title" = "Этот раунд окончен!";
+"result.text" = "Ваш результат: %lld/%lld";
+"result.replay" = "Сыграть ещё раз";
+
+/* Storyboard placeholder text — was hardcoded Russian in Main.storyboard.
+   These strings now back the labels at runtime. */
+"label.question.prefix" = "Вопрос:";
+"label.counter.format" = "%lld/%lld";
