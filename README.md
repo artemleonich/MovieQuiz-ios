@@ -1,123 +1,72 @@
+<p align="center">
+  <img src=".github/assets/banner.svg" width="100%" alt="MovieQuiz" />
+</p>
+
 # MovieQuiz
 
-[Русский](#русский) | [English](#english)
+Учебный iOS-квиз о рейтингах фильмов. Постер, вопрос и два ответа — «Да» или «Нет».
 
----
+**Swift · UIKit · Storyboard · Auto Layout**  
+[Запуск](#запуск) · [Структура](#структура) · [English](#english)
 
-<a id="русский"></a>
+## Как играть
 
-## 🇷🇺 Русский
+Приложение показывает постер и спрашивает, превышает ли рейтинг фильма 6 баллов. Выберите ответ: рамка станет зелёной при правильном ответе или красной при ошибке. Через одну секунду появится следующий вопрос.
 
-### Описание
+Раунд состоит из **10 вопросов**. В конце приложение показывает число правильных ответов и предлагает сыграть ещё раз.
 
-MovieQuiz — iOS-приложение с квизами о фильмах из топ-250 рейтинга и самых популярных фильмов по версии IMDb. Пользователь отвечает на вопросы о рейтинге фильмов, а приложение ведёт статистику правильных ответов и лучших результатов. Проект выполнен в рамках курса Яндекс Практикума.
+## Текущее состояние
 
-### Как играть
+В ветке по умолчанию `project_sprint_3_start` реализован квиз со встроенным списком вопросов и локальными постерами. Кнопки ответа блокируются на время показа результата; счётчик вопросов и итог раунда обновляются в контроллере.
 
-Приложение показывает постер фильма и задаёт вопрос о его IMDb-рейтинге (например, «Рейтинг этого фильма больше 6?»). Игрок выбирает «Да» или «Нет». После каждого ответа рамка постера подсвечивается зелёным (верно) или красным (неверно). Раунд состоит из 10 вопросов, после чего показывается статистика.
+Проект выполнен в рамках курса **Яндекс Практикума**. Интерфейс предназначен для iPhone.
 
-### Функциональность
+## Запуск
 
-- Сплеш-скрин при запуске
-- Вопросы на основе IMDb-рейтинга по 10-балльной шкале
-- Визуальная обратная связь: рамка постера меняет цвет в зависимости от правильности ответа
-- Автоматический переход к следующему вопросу через 1 секунду
-- Статистика после каждого раунда: результат, количество игр, рекорд, средняя точность
-- Возможность начать новый раунд
-- Обработка сетевых ошибок с возможностью повторного запроса
+Нужны macOS, Xcode с поддержкой Swift 5 и совместимый iOS SDK. В настройках target приложения указан **iOS 13.0**.
 
-### Технические требования
-
-- iOS 13+, только iPhone, портретный режим
-- Вёрстка адаптирована под экраны iPhone начиная с X
-- UI соответствует макету Figma
-
-### Структура проекта
-
-```
-MovieQuiz-ios/
-├── MovieQuiz/
-│   ├── Helpers/                        # Вспомогательные утилиты
-│   ├── Presentation/
-│   │   ├── Base.lproj/                 # Storyboard
-│   │   └── MovieQuizViewController.swift  # Главный контроллер квиза
-│   ├── Resources/                      # Ресурсы (Assets, шрифты, Info.plist)
-│   ├── AppDelegate.swift
-│   └── SceneDelegate.swift
-├── MovieQuiz.xcodeproj
-└── README.md
+```bash
+git clone https://github.com/artemleonich/MovieQuiz-ios.git
+cd MovieQuiz-ios
+open MovieQuiz.xcodeproj
 ```
 
-### Ссылки
+В Xcode выберите схему **MovieQuiz**, симулятор iPhone и нажмите **Run** (⌘R). Все вопросы и изображения включены в проект.
+
+Для запуска на физическом устройстве выберите свою команду в **Signing & Capabilities**.
+
+## Структура
+
+```text
+MovieQuiz/
+├── Presentation/
+│   ├── MovieQuizViewController.swift # вопросы, ответы и результат
+│   └── Base.lproj/Main.storyboard    # экран квиза
+├── Helpers/                          # расширения Array, Date и UIColor
+├── Resources/
+│   ├── Assets.xcassets/               # постеры, цвета и иконки
+│   ├── Fonts/                        # YS Display
+│   ├── Base.lproj/LaunchScreen.storyboard
+│   └── Info.plist
+├── AppDelegate.swift
+└── SceneDelegate.swift
+MovieQuiz.xcodeproj/
+```
+
+Логика текущего квиза находится в [MovieQuizViewController.swift](MovieQuiz/Presentation/MovieQuizViewController.swift). Интерфейс собран с помощью Storyboard и Auto Layout.
+
+## Материалы курса
 
 - [Макет Figma](https://www.figma.com/file/l0IMG3Eys35fUrbvArtwsR/YP-Quiz?node-id=34%3A243)
-- [API IMDb](https://imdb-api.com/api#Top250Movies-header)
-- [Шрифты](https://code.s3.yandex.net/Mobile/iOS/Fonts/MovieQuizFonts.zip)
+- [Шрифты MovieQuiz](https://code.s3.yandex.net/Mobile/iOS/Fonts/MovieQuizFonts.zip)
+- [Ссылка на IMDb API из задания](https://imdb-api.com/api#Top250Movies-header)
 
-### Технологии
+Ссылка на API сохранена как материал задания. Данные текущего квиза хранятся локально.
 
-- Swift, UIKit
-- Storyboard (Auto Layout)
-- URLSession (сетевые запросы к IMDb API)
-- UserDefaults (хранение статистики)
-- MVC архитектура
+## English
 
----
+A Yandex Practicum iOS learning project built with Swift, UIKit, Storyboard and Auto Layout. The current default branch contains ten bundled movie-rating questions and local poster assets.
 
-<a id="english"></a>
+Choose Yes or No, see the answer highlighted for one second, then continue to the next question. The round ends with a score and a replay action.
 
-## 🇬🇧 English
-
-### Description
-
-MovieQuiz is an iOS quiz app about movies from the IMDb Top 250 and most popular films. Users answer questions about movie ratings while the app tracks correct answers and best results. Built as part of the Yandex Practicum iOS development course.
-
-### How to Play
-
-The app displays a movie poster and asks a question about its IMDb rating (e.g., "Is the rating of this movie higher than 6?"). The player chooses "Yes" or "No." After each answer, the poster frame highlights green (correct) or red (incorrect). A round consists of 10 questions, followed by a statistics summary.
-
-### Features
-
-- Splash screen on launch
-- Questions based on IMDb ratings (10-point scale)
-- Visual feedback: poster frame changes color based on answer correctness
-- Automatic transition to next question after 1 second
-- Round statistics: current result, total games played, best score, average accuracy
-- Option to start a new round
-- Network error handling with retry option
-
-### Technical Requirements
-
-- iOS 13+, iPhone only, portrait mode
-- Layout adapted for iPhone screens starting from X
-- UI matches the Figma design mockup
-
-### Project Structure
-
-```
-MovieQuiz-ios/
-├── MovieQuiz/
-│   ├── Helpers/                        # Utility helpers
-│   ├── Presentation/
-│   │   ├── Base.lproj/                 # Storyboard
-│   │   └── MovieQuizViewController.swift  # Main quiz view controller
-│   ├── Resources/                      # Assets, fonts, Info.plist
-│   ├── AppDelegate.swift
-│   └── SceneDelegate.swift
-├── MovieQuiz.xcodeproj
-└── README.md
-```
-
-### Links
-
-- [Figma Mockup](https://www.figma.com/file/l0IMG3Eys35fUrbvArtwsR/YP-Quiz?node-id=34%3A243)
-- [IMDb API](https://imdb-api.com/api#Top250Movies-header)
-- [Fonts](https://code.s3.yandex.net/Mobile/iOS/Fonts/MovieQuizFonts.zip)
-
-### Tech Stack
-
-- Swift, UIKit
-- Storyboard (Auto Layout)
-- URLSession (networking with IMDb API)
-- UserDefaults (statistics persistence)
-- MVC architecture
+Open `MovieQuiz.xcodeproj`, choose the MovieQuiz scheme and an iPhone simulator, then press ⌘R. The app target is iOS 13.0.
