@@ -1,6 +1,6 @@
 # MovieQuiz
 
-<img src=".github/assets/stack.svg" height="28" alt="Swift · UIKit · Learning" />
+<a href=".github/assets/light/stack.svg#gh-light-mode-only"><img src=".github/assets/light/stack.svg" height="28" alt="Swift · UIKit · Learning" /></a><a href=".github/assets/stack.svg#gh-dark-mode-only"><img src=".github/assets/stack.svg" height="28" alt="Swift · UIKit · Learning" /></a>
 
 Учебный iOS-квиз о рейтингах фильмов. Постер, вопрос и два ответа — «Да» или «Нет».
 
