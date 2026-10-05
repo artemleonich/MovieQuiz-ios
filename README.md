@@ -1,12 +1,9 @@
-<p align="center">
-  <img src=".github/assets/banner.svg" width="100%" alt="MovieQuiz" />
-</p>
-
 # MovieQuiz
+
+<img src=".github/assets/stack.svg" height="28" alt="Swift · UIKit · Learning" />
 
 Учебный iOS-квиз о рейтингах фильмов. Постер, вопрос и два ответа — «Да» или «Нет».
 
-**Swift · UIKit · Storyboard · Auto Layout**  
 [Запуск](#запуск) · [Структура](#структура) · [English](#english)
 
 ## Как играть
